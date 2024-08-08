@@ -8,9 +8,11 @@ import { Item } from './item';
 })
 export class ListaService {
 
-  // private readonly API = 'https://json-server-seven-alpha.vercel.app/lista';
-  private readonly API = 'https://json-server-vercel-pied.vercel.app/lista';
-  
+  private readonly API = 'https://json-server-seven-alpha.vercel.app/lista';
+  // private readonly API = 'https://json-server-vercel-pied.vercel.app/lista';
+  // private readonly API = 'http://127.0.0.1:3000/lista';
+
+
   constructor(private http: HttpClient) {
   }
 
@@ -18,7 +20,7 @@ export class ListaService {
     return this.http.get<Item[]>(this.API);
   }
 
-  salvarItem(item: Item): Observable<Item>{
+  salvarItem(item: Item): Observable<Item> {
     return this.http.post<Item>(this.API, item);
   }
 }
