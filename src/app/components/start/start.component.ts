@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-start',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './start.component.html',
   styleUrl: './start.component.css'
 })
 export class StartComponent {
   constructor(private router: Router) {
   }
-  exibirTabela() {
-    this.router.navigateByUrl('/tabela');
-  }
+  
 }
