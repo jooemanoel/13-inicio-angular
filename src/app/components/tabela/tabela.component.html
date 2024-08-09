@@ -8,18 +8,14 @@
     </nav>
 </section>
 <section class="principal">
-    <table class="tabela">
-        <tr>
-            <th>Produto</th>
-            <th>Quantidade</th>
-            <th>Medida</th>
-        </tr>
+    <section class="tabela">
+        <div class="linha">
+            <span class="celula">Produto</span>
+            <span class="celula">Quantidade</span>
+            <span class="celula">Medida</span>
+        </div>
         @for (item of itens; track item) {
-        <tr>
-            <td>{{item.nome}}</td>
-            <td>{{item.qt}}</td>
-            <td>{{item.md}}</td>
-        </tr>
+            <app-linha [item]="item"></app-linha>
         }
-    </table>
+    </section>
 </section>

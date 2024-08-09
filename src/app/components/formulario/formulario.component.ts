@@ -13,7 +13,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class FormularioComponent {
   itemForm!: FormGroup;
-  itembasico: any = { nome: '', qt: 0, md: 'un' };
+  itembasico: Item = { nome: '', qt: 0, md: 'un' };
   constructor(private listaService: ListaService, private router: Router) {
   }
   ngOnInit() {
